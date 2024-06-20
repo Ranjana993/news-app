@@ -1,10 +1,10 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
       inter: ["Inter", "sans-serif"],
-      "edu-sa": ["Edu SA Beginner", "cursive"],
       mono: ["Roboto Mono", "monospace"],
     },
     colors: {
@@ -67,34 +67,6 @@ module.exports = {
         800: "#01321F",
         900: "#001B0D",
       },
-      brown: {
-        5: "#FFF4C4",
-        25: "#FFE395",
-        50: "#FFD166",
-        100: "#E7BC5B",
-        200: "#CFA64F",
-        300: "#B89144",
-        400: "#A07C39",
-        500: "#88662D",
-        600: "#705122",
-        700: "#593C17",
-        800: "#41260B",
-        900: "#291100",
-      },
-      pink: {
-        5: "#FFF1F1",
-        25: "#FBC7D1",
-        50: "#F79CB0",
-        100: "#F37290",
-        200: "#EF476F",
-        300: "#D43D63",
-        400: "#BA3356",
-        500: "#9F294A",
-        600: "#841E3E",
-        700: "#691432",
-        800: "#4F0A25",
-        900: "#340019",
-      },
       yellow: {
         5: "#FFF970",
         25: "#FFE83D",
@@ -128,6 +100,19 @@ module.exports = {
       maxWidth: {
         maxContent: "1260px",
         maxContentTab: "650px"
+      },
+      fontFamily: {
+        'playfair': ['"Playfair Display"', 'serif'],
+      },
+      fontWeight: {
+        'extra-light': '400',
+        'light': '400',
+        'normal': '500',
+        'medium': '600',
+        'semi-bold': '700',
+        'bold': '800',
+        'extra-bold': '900',
+        'custom-weight': '750',
       },
     },
   },

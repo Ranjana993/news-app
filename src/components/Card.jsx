@@ -1,7 +1,4 @@
 /* eslint-disable react/prop-types */
-// src/Card.js
-
-import { Link } from "react-router-dom";
 
 const truncateText = (text, wordLimit) => {
   if (text === "[Removed]") return <p>There are variations Lorem Ipsum available, but the majority have suffered in some form, by injected humour.</p>
@@ -18,28 +15,22 @@ const truncateText = (text, wordLimit) => {
 
 const Card = ({ item }) => {
   const truncatedDescription = truncateText(item?.description || "There are many variations of passages of Lorem Ipsum available, but the majority have suffered in some form, by injected humour, or randomised words which don't look even slightly believable.", 15);
-
+  if (!item) return <h2>No data Found </h2>
   return (
-    <div className="w-[90%] lg:w-[22%] ">
-      <div className="rounded-lg shadow-lg bg-pure-greys-5 border border-pure-greys-25">
+    <div className="w-[90%] lg:w-[20%] cursor-pointer">
+      <div className="rounded-lg shadow-lg bg-pure-greys-5 border border-pure-greys-25  transition-all duration-700 hover:scale-105">
         <a href="#">
           <img className="rounded-t-lg w-full" src={item?.urlToImage || "https://i.insider.com/667114ee764df161125a9e20?width=1200&format=jpeg"} alt="News" />
         </a>
-        <div className="py-5 px-1" >
+        <div className="py-5 px-1 p-1" >
           <a href="#">
-            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 ">
-              Noteworthy technology acquisitions 2021
+            <h5 className="mb-2 text-xl font-bold tracking-tight font-playfair text-pure-greys-800">
+              {item?.title}
             </h5>
           </a>
-          <p className="mb-3 font-normal text-gray-700">
+          <p className="mb-3 font-normal text-gray-700 text-pure-greys-400">
             {truncatedDescription}
           </p>
-          {/* <Link to={item?.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700">
-            Read more
-            <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1 5h12m0 0L9 1m4 4L9 9" />
-            </svg>
-          </Link> */}
         </div>
       </div>
     </div>

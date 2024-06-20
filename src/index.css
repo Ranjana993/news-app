@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Add these styles in your CSS file or as inline styles */
+.button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #007BFF;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  filter: blur(1px);
+  cursor: not-allowed;
+}
+
+.button:not(:disabled):hover {
+  background-color: #0160c7;
+  /* Example hover effect */
+  color: #fff;
+}

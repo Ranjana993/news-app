@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const HeroSection = () => {
   const headline = "Breaking News: Major Event Unfolds";
@@ -14,10 +14,10 @@ const HeroSection = () => {
         />
       </div>
       <div className="relative z-10 max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4">{headline}</h1>
+        <h1 className="text-4xl mb-4 font-playfair font-medium">{headline}</h1>
         <p className="mb-6">{summary}</p>
         <div className="flex space-x-4">
-          <a href="#" className="bg-blue-600 px-4 py-2 rounded text-sm">Read More</a>
+          <a href="#" className="bg-[#17459c]  px-4 py-2 rounded text-sm text-white font-bold transition-all duration-500 hover:scale-110">Read More</a>
           <a href="#" className="bg-gray-700 px-4 py-2 rounded text-sm">Trending</a>
         </div>
       </div>
