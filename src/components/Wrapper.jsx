@@ -6,6 +6,7 @@ import ButtonGrp from "./ButtonGrp";
 import Shimmer from "./ShimmerUI";
 import NewsContainer from "./NewsContainer";
 import useDebounce from "../hook/useDebounce "
+import toast from "react-hot-toast";
 
 export default function Wrapper() {
   const [data, setData] = useState([]);
@@ -31,6 +32,7 @@ export default function Wrapper() {
       setData(response?.data?.articles || []);
       setTotalResults(response?.data?.totalResults || 0);
     } catch (error) {
+      toast.error("Error while fetching data " , error.message)
       console.error("Error fetching data:", error);
     }
     setLoading(false);

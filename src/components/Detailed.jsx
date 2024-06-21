@@ -1,7 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import loader from "../assets/loader.gif"
+import toast from "react-hot-toast";
 
 const DetailedPage = () => {
   const { name } = useParams();
@@ -21,6 +23,7 @@ const DetailedPage = () => {
       setArticle(articleData);
     } catch (error) {
       console.error("Error fetching data:", error);
+      toast.error("Error while fetching data ", error.message)
     }
   };
 
