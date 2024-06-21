@@ -5,7 +5,7 @@ const Shimmer = () => {
       {Array.from({ length: 8 }).map((_, index) => (
         <div
           key={index}
-          className="bg-pure-greys-100 rounded-lg p-4 animate-pulse w-[90%] lg:w-[20%] mt-8 flex flex-col space-y-4"
+          className="bg-pure-greys-100 rounded-lg p-4 animate-pulse w-[90%] mt-8 lg:w-[20%] flex flex-col space-y-4"
         >
           <div className="h-48 bg-gray-400 rounded-lg"></div>
           <div className="space-y-2">

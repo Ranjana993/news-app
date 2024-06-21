@@ -17,8 +17,7 @@ const HeroSection = () => {
         <h1 className="text-4xl mb-4 font-playfair font-medium">{headline}</h1>
         <p className="mb-6">{summary}</p>
         <div className="flex space-x-4">
-          <a href="#" className="bg-[#17459c]  px-4 py-2 rounded text-sm text-white font-bold transition-all duration-500 hover:scale-110">Read More</a>
-          <a href="#" className="bg-gray-700 px-4 py-2 rounded text-sm">Trending</a>
+          <a href="#" className="bg-[#17459c]  px-4 py-2 rounded text-sm text-white font-semibold transition-all duration-500 hover:scale-110">Read More</a>
         </div>
       </div>
     </div>

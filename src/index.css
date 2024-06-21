@@ -5,7 +5,7 @@
 
 /* Add these styles in your CSS file or as inline styles */
 .button {
-  padding: 10px 20px;
+  padding: 5px 12px;
   margin: 0 5px;
   font-size: 16px;
   border: none;
@@ -25,4 +25,25 @@
   background-color: #0160c7;
   /* Example hover effect */
   color: #fff;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 132, 255);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(1, 74, 142);
 }
